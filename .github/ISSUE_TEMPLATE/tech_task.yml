@@ -1,4 +1,4 @@
-name: Tech Task
+name: 🔧 Tech Task
 description: 技術的タスク（リファクタリング、依存関係更新、CI/CD改善など）
 labels: ["tech"]
 body:
