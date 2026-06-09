@@ -8,7 +8,7 @@ body:
       label: 対象アプリ
       options:
         - ユーザー向けWebアプリ（apps/user）
-        - AI Agent API（apps/api）
+        - バックエンドAPI（apps/api）
         - Chrome拡張（apps/clipper）
         - 共通パッケージ（packages/）
         - 新規
