@@ -16,12 +16,11 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: notion-task
+  - type: textarea
+    id: related-links
     attributes:
-      label: 関連Notionタスク
-      description: 関連するタスクがあれば記載（例：TRMN-123）
-      placeholder: TRMN-XXX
+      label: 関連リンク
+      description: 関連するIssue、PR、Figma、仕様書、参考サイトなどのリンクを記載してください
     validations:
       required: false
 
@@ -50,13 +49,5 @@ body:
     attributes:
       label: 代替案
       description: 検討した別のアプローチがあれば記載してください
-    validations:
-      required: false
-
-  - type: textarea
-    id: references
-    attributes:
-      label: 参考資料
-      description: Figma、仕様書、参考サイトなどがあればリンクを貼ってください
     validations:
       required: false

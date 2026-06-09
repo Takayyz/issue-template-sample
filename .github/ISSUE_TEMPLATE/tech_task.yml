@@ -37,11 +37,11 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: notion-task
+  - type: textarea
+    id: related-links
     attributes:
-      label: 関連Notionタスク
-      placeholder: TRMN-XXX
+      label: 関連リンク
+      description: 関連するIssue、PR、ドキュメント、参考資料などのリンクを記載してください
     validations:
       required: false
 
