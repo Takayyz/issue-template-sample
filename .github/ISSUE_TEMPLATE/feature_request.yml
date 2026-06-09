@@ -7,10 +7,10 @@ body:
     attributes:
       label: 対象アプリ
       options:
-        - apps/user（ユーザー向けWebアプリ）
-        - apps/api（AI Agent API）
-        - apps/clipper（Chrome拡張）
-        - packages/（共通パッケージ）
+        - ユーザー向けWebアプリ（apps/user）
+        - AI Agent API（apps/api）
+        - Chrome拡張（apps/clipper）
+        - 共通パッケージ（packages/）
         - 新規
         - その他
     validations:
