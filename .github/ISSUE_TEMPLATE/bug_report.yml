@@ -1,0 +1,93 @@
+name: Bug Report
+description: バグの報告
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: app
+    attributes:
+      label: 対象アプリ
+      options:
+        - apps/user（ユーザー向けWebアプリ）
+        - apps/api（AI Agent API）
+        - apps/clipper（Chrome拡張）
+        - packages/（共通パッケージ）
+        - その他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先度
+      description: |
+        P0: サービス停止レベル / P1: 主要機能が使えない / P2: 回避策あり / P3: 軽微
+      options:
+        - P0（緊急）
+        - P1（高）
+        - P2（中）
+        - P3（低）
+    validations:
+      required: true
+
+  - type: input
+    id: notion-task
+    attributes:
+      label: 関連Notionタスク
+      description: 関連するタスクがあれば記載（例：TRMN-123）
+      placeholder: TRMN-XXX
+    validations:
+      required: false
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: バグの概要
+      description: 何が起きているかを簡潔に説明してください
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: バグを再現するための手順を記載してください
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する動作
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の動作
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境情報
+      description: 該当する環境情報を記載してください
+      value: |
+        - 環境: develop / staging / production
+        - ブラウザ:
+        - OS:
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: スクリーンショット / ログ
+      description: 画面キャプチャやエラーログがあれば添付してください
+    validations:
+      required: false

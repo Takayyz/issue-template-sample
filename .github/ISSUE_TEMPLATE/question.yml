@@ -1,0 +1,27 @@
+name: Question
+description: 質問・相談・議論
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: 質問内容
+      description: 聞きたいこと・相談したいことを記載してください
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 背景・経緯
+      description: 質問の背景や、調べたこと・試したことがあれば記載してください
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 参考資料
+      description: 関連するドキュメント、コード、リンクなど
+    validations:
+      required: false

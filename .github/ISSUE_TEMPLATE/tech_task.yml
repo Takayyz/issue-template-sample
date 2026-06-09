@@ -1,0 +1,82 @@
+name: Tech Task
+description: 技術的タスク（リファクタリング、依存関係更新、CI/CD改善など）
+labels: ["tech"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: カテゴリ
+      options:
+        - リファクタリング
+        - 依存関係更新
+        - CI/CD
+        - パフォーマンス改善
+        - セキュリティ
+        - テスト追加・改善
+        - ドキュメント
+        - インフラ / Cloudflare
+        - DB / マイグレーション
+        - その他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: app
+    attributes:
+      label: 対象アプリ / パッケージ
+      multiple: true
+      options:
+        - apps/user
+        - apps/api
+        - apps/clipper
+        - packages/schemas
+        - packages/logger
+        - .github/workflows
+        - プロジェクト全体
+        - その他
+    validations:
+      required: true
+
+  - type: input
+    id: notion-task
+    attributes:
+      label: 関連Notionタスク
+      placeholder: TRMN-XXX
+    validations:
+      required: false
+
+  - type: textarea
+    id: current
+    attributes:
+      label: 現状の問題
+      description: 現在の課題や技術的負債を説明してください
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 改善案
+      description: どのように改善するかを記載してください
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: 作業項目
+      description: 必要な作業をリストアップしてください
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: false
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: リスク・注意点
+      description: 破壊的変更やデプロイへの影響があれば記載してください
+    validations:
+      required: false
